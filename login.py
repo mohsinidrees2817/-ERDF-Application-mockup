@@ -19,6 +19,6 @@ def show_login():
             if login_user(email, password):
                 st.session_state["user"] = email
                 st.success("Login successful!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Invalid credentials.")
